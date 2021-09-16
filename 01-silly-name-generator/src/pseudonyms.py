@@ -1,4 +1,4 @@
-import random
+import random, sys
 
 first = ('Baby Oil', 'Bad News', 'Big Burps', "Bill 'Beenie-Weenie'",
          "Bob 'Stinkbug'", 'Bowel Noises', 'Boxelder', "Bud 'Lite'",
@@ -33,4 +33,4 @@ last = ('Appleyard', 'Bigmeat', 'Bloominshine', 'Boogerbottom',
 
 pickedFirst = random.choice(first)
 pickedLast = random.choice(last)
-print(f"{pickedFirst} {pickedLast}")
+print(f"{pickedFirst} {pickedLast}", file=sys.stderr)
