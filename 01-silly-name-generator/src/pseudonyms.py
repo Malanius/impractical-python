@@ -31,6 +31,14 @@ last = ('Appleyard', 'Bigmeat', 'Bloominshine', 'Boogerbottom',
         'Weiners', 'Whipkey', 'Wigglesworth', 'Wimplesnatch', 'Winterkorn',
         'Woolysocks')
 
-pickedFirst = random.choice(first)
-pickedLast = random.choice(last)
-print(f"{pickedFirst} {pickedLast}", file=sys.stderr)
+while True:
+    pickedFirst = random.choice(first)
+    pickedLast = random.choice(last)
+
+    print(f"{pickedFirst} {pickedLast}", file=sys.stderr)
+    
+    try_again = input("Try again? Press enter to continue, N to quit: ")
+    if try_again.lower() == "n":
+        break
+
+print("Goodbye!")
