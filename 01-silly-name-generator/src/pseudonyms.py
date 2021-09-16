@@ -1,4 +1,5 @@
-import random, sys
+import random
+import sys
 
 def main():
     print("Welcome to the Psych 'Sidekick Name Picker.'")
