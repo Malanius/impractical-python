@@ -1,3 +1,5 @@
+import random
+
 first = ('Baby Oil', 'Bad News', 'Big Burps', "Bill 'Beenie-Weenie'",
          "Bob 'Stinkbug'", 'Bowel Noises', 'Boxelder', "Bud 'Lite'",
          'Butterbean', 'Buttermilk', 'Buttocks', 'Chad', 'Chesterfield',
@@ -28,3 +30,7 @@ last = ('Appleyard', 'Bigmeat', 'Bloominshine', 'Boogerbottom',
         'Turnipseed', 'Vinaigrette', 'Walkingstick', 'Wallbanger', 'Weewax',
         'Weiners', 'Whipkey', 'Wigglesworth', 'Wimplesnatch', 'Winterkorn',
         'Woolysocks')
+
+pickedFirst = random.choice(first)
+pickedLast = random.choice(last)
+print(f"{pickedFirst} {pickedLast}")
