@@ -1,5 +1,8 @@
 import random, sys
 
+print("Welcome to the Psych 'Sidekick Name Picker.'")
+print("A name just like Sean would pick for Gus:")
+
 first = ('Baby Oil', 'Bad News', 'Big Burps', "Bill 'Beenie-Weenie'",
          "Bob 'Stinkbug'", 'Bowel Noises', 'Boxelder', "Bud 'Lite'",
          'Butterbean', 'Buttermilk', 'Buttocks', 'Chad', 'Chesterfield',
@@ -35,9 +38,11 @@ while True:
     pickedFirst = random.choice(first)
     pickedLast = random.choice(last)
 
+    print("\n")
     print(f"{pickedFirst} {pickedLast}", file=sys.stderr)
-    
-    try_again = input("Try again? Press enter to continue, N to quit: ")
+    print("\n")
+
+    try_again = input("Try again? Press enter to continue, 'n' to quit: ")
     if try_again.lower() == "n":
         break
 
