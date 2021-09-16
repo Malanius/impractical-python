@@ -36,11 +36,11 @@ def main():
             'Wigglesworth', 'Wimplesnatch', 'Winterkorn', 'Woolysocks')
 
     while True:
-        pickedFirst = random.choice(first)
-        pickedLast = random.choice(last)
+        picked_first = random.choice(first)
+        picked_last = random.choice(last)
 
         print("\n")
-        print(f"{pickedFirst} {pickedLast}", file=sys.stderr)
+        print(f"{picked_first} {picked_last}", file=sys.stderr)
         print("\n")
 
         try_again = input("Try again? Press enter to continue, 'n' to quit: ")
