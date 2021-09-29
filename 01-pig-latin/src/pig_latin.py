@@ -1,14 +1,14 @@
 """Convert any english word to pig latin."""
 
-consonants = ["b","c","d","f","g","j","k","l","m","n","p","q","s","t","v","x","z","h","r","w","y"]
+VOWELS = 'aeiouy'
 
 def pig_latinize(word):
     """Convert given word to pig latin."""
     start_letter = word[:1]
     rest_word = word[1:]
-    if start_letter in consonants:
-        return rest_word + start_letter + "ay"
-    return word + "way"
+    if start_letter in VOWELS:
+        return word + "way"
+    return rest_word + start_letter + "ay"
 
 def main():
     """Promts for word to be converted to pig latin."""
