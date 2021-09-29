@@ -1,0 +1,56 @@
+"""Generate funny names by randomly combining names from 2 separate lists."""
+import random
+import sys
+
+FIRST = ('Baby Oil', 'Bad News', 'Big Burps', "Bill 'Beenie-Weenie'",
+             "Bob 'Stinkbug'", 'Bowel Noises', 'Boxelder', "Bud 'Lite'",
+             'Butterbean', 'Buttermilk', 'Buttocks', 'Chad', 'Chesterfield',
+             'Chewy', 'Chigger', 'Cinnabuns', 'Cleet', 'Cornbread',
+             'Crab Meat', 'Crapps', 'Dark Skies', 'Dennis Clawhammer',
+             'Dicman', 'Elphonso', 'Fancypants', 'Figgs', 'Foncy', 'Gootsy',
+             'Greasy Jim', 'Huckleberry', 'Huggy', 'Ignatious', 'Jimbo',
+             "Joe 'Pottin Soil'", 'Johnny', 'Lemongrass', 'Lil Debil',
+             'Longbranch', '"Lunch Money"', 'Mergatroid', '"Mr Peabody"',
+             'Oil-Can', 'Oinks', 'Old Scratch', 'Ovaltine', 'Pennywhistle',
+             'Pitchfork Ben', 'Potato Bug', 'Pushmeet', 'Rock Candy',
+             'Schlomo', 'Scratchensniff', 'Scut', "Sid 'The Squirts'",
+             'Skidmark', 'Slaps', 'Snakes', 'Snoobs', 'Snorki', 'Soupcan Sam',
+             'Spitzitout', 'Squids', 'Stinky', 'Storyboard', 'Sweet Tea',
+             'TeeTee', 'Wheezy Joe', "Winston 'Jazz Hands'", 'Worms')
+
+LAST = ('Appleyard', 'Bigmeat', 'Bloominshine', 'Boogerbottom',
+        'Breedslovetrout', 'Butterbaugh', 'Clovenhoof', 'Clutterbuck',
+        'Cocktoasten', 'Endicott', 'Fewhairs', 'Gooberdapple',
+        'Goodensmith', 'Goodpasture', 'Guster', 'Henderson', 'Hooperbag',
+        'Hoosenater', 'Hootkins', 'Jefferson', 'Jenkins',
+        'Jingley-Schmidt', 'Johnson', 'Kingfish', 'Listenbee', "M'Bembo",
+        'McFadden', 'Moonshine', 'Nettles', 'Noseworthy', 'Olivetti',
+        'Outerbridge', 'Overpeck', 'Overturf', 'Oxhandler', 'Pealike',
+        'Pennywhistle', 'Peterson', 'Pieplow', 'Pinkerton', 'Porkins',
+        'Putney', 'Quakenbush', 'Rainwater', 'Rosenthal', 'Rubbins',
+        'Sackrider', 'Snuggleshine', 'Splern', 'Stevens', 'Stroganoff',
+        'Sugar-Gold', 'Swackhamer', 'Tippins', 'Turnipseed', 'Vinaigrette',
+        'Walkingstick', 'Wallbanger', 'Weewax', 'Weiners', 'Whipkey',
+        'Wigglesworth', 'Wimplesnatch', 'Winterkorn', 'Woolysocks')
+
+def main():
+    """Choose names at random from 2 tuples of names and print to screen."""
+    print("Welcome to the Psych 'Sidekick Name Picker.'")
+    print("A name just like Sean would pick for Gus:")
+
+    while True:
+        picked_first = random.choice(FIRST)
+        picked_last = random.choice(LAST)
+
+        print("\n")
+        print(f"{picked_first} {picked_last}", file=sys.stderr)
+        print("\n")
+
+        try_again = input("Try again? Press enter to continue, 'n' to quit: ")
+        if try_again.lower() == "n":
+            break
+
+    print("Goodbye!")
+
+if __name__ == "__main__":
+    main()
