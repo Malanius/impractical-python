@@ -4,11 +4,9 @@ VOWELS = 'aeiouy'
 
 def pig_latinize(word):
     """Convert given word to pig latin."""
-    start_letter = word[:1]
-    rest_word = word[1:]
-    if start_letter in VOWELS:
+    if word[0] in VOWELS:
         return word + "way"
-    return rest_word + start_letter + "ay"
+    return word[1:] + word[:1] + "ay"
 
 def main():
     """Promts for word to be converted to pig latin."""
