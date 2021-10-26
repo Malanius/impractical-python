@@ -7,4 +7,5 @@ for word in word_list:
     if len(word) > 1 and word == word[::-1]:
         palindrome_list.append(word)
 
-print(palindrome_list)
+print(f"Palindromes found: {len(palindrome_list)}\n")
+print(*palindrome_list, sep="\n")
